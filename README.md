@@ -1,1 +1,1 @@
-# splashpage
+# splashpage for JuniorDev.io
