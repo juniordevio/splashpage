@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0px;
+  line-height: 20px;
+
+  border: 5px solid #FFFFFF;
+  margin: 0;
+
+  background-image: linear-gradient(to right,#ffbf1e,#de1aff);
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.logo {
+  padding-bottom: 35px;
+}
+
+.form-text {
+  padding-bottom: 10px;
+}
+
+.form-submit {
+  position: relative;
+}
+
+.email {
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 1px solid #313440;
+  color: #83858c;
+  min-width: 300px;
+}
+
+.email-submit {
+  position: absolute;
+
+}
