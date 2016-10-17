@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <title>Junior Dev</title>
     <link rel="stylesheet" href="./styles.css" media="screen" title="no title">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -18,49 +20,63 @@
         <div id="mc_embed_signup">
             <form action="//juniordev.us14.list-manage.com/subscribe/post?u=888d9087b25cae4ae5665fdca&amp;id=924b5e3a48" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                    Hi, my name is
-                    <div class="mc-field-group">
-                        <label for="mce-FNAME"></label>
-                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-                    </div>
-                    I'm a junior
 
                     <div class="mc-field-group">
-                        <label for="mce-group[1331]"></label>
-                        <select name="group[1331]" class="REQ_CSS" id="mce-group[1331]">
-                            <option value=""></option>
-                            <option value="4096">Full Stack</option>
-                            <option value="8192">Front End</option>
-                            <option value="16384">Back End</option>
-                            <option value="32768">Mobile</option>
-                            <option value="65536">All of The Thingz</option>
-
-                        </select>
+                        <label for="mce-FNAME">Hi, my name is </label>
+                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME"> .
                     </div>
-                    developer, living in
-                    <div class="mc-field-group">
-                        <label for="mce-group[1327]"></label>
-                        <select name="group[1327]" class="REQ_CSS" id="mce-group[1327]">
-                            <option value=""></option>
-                            <option value="1">Victoria</option>
-                            <option value="2">New South Wales</option>
-                            <option value="4">South Australia</option>
-                            <option value="8">Queensland</option>
-                            <option value="16">Western Australia</option>
-                            <option value="32">Tasmania</option>
-                            <option value="64">Northern Territory</option>
-                            <option value="128">Australian Capital Territory</option>
-                            <option value="256">United States of America</option>
-                            <option value="512">United Kingdom</option>
-                            <option value="1024">New Zealand</option>
-                            <option value="2048">Other</option>
 
-                        </select>
+                    <div>
+                        <span class="mc-field-group jd-input-container">
+                            <label for="mce-group[1331]">I'm a junior</label>
+                            <span class="jd-input-value">Full Stack <span class="chevron bottom"></span> </span>
+                            <select name="group[1331]" class="REQ_CSS input" id="mce-group[1331]">
+                                <option value=""></option>
+                                <option value="4096">Full Stack</option>
+                                <option value="8192">Front End</option>
+                                <option value="16384">Back End</option>
+                                <option value="32768">Mobile</option>
+                                <option value="65536">All of The Thingz</option>
+                            </select>
+                        </span>
+                        <span class="mc-field-group">
+                            <label for="mce-group[1327]"> developer, living in</label>
+                            <span class="jd-input-value">Melbs <span class="chevron bottom"></span></span>
+                            <select name="group[1327]" class="REQ_CSS" id="mce-group[1327]">
+                                <option value=""></option>
+                                <option value="1">Victoria</option>
+                                <option value="2">New South Wales</option>
+                                <option value="4">South Australia</option>
+                                <option value="8">Queensland</option>
+                                <option value="16">Western Australia</option>
+                                <option value="32">Tasmania</option>
+                                <option value="64">Northern Territory</option>
+                                <option value="128">Australian Capital Territory</option>
+                                <option value="256">United States of America</option>
+                                <option value="512">United Kingdom</option>
+                                <option value="1024">New Zealand</option>
+                                <option value="2048">Other</option>
+
+                            </select>
+                            .
+                        </span>
                     </div>
-                    .
-                    I'm interested in
+
                     <div class="mc-field-group">
-                        <label for="mce-group[1335]"></label>
+                        <label for="mce-group[1335]">I'm interested in</label>
+                        <span class="jd-input-container">
+                          <span class="jd-input-value">All da tings <span class="chevron bottom"></span></span>
+                          <span class="jd-select-contents">
+                              <span>Tutorials</span>
+                              <span>Articles</span>
+                              <span>News</span>
+                              <span>Event Updates</span>
+                              <span>Videos</span>
+                              <span>Jobs</span>
+                              <span>All of the Thingz</span>
+                          </span>
+                        </span>
+
                         <select name="group[1335]" class="REQ_CSS" id="mce-group[1335]">
                             <option value=""></option>
                             <option value="131072">Tutorials</option>
@@ -70,14 +86,12 @@
                             <option value="2097152">Videos</option>
                             <option value="4194304">Jobs</option>
                             <option value="8388608">All of the Thingz</option>
-
-                        </select>
+                        </select> .
                     </div>
 
-                    Hit me up at
                     <div class="mc-field-group">
-                        <label for="mce-EMAIL"></label>
-                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <label for="mce-EMAIL">Hit me up at</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"> .
                     </div>
                     <div id="mce-responses" class="clear">
                         <div class="response" id="mce-error-response" style="display:none"></div>
@@ -96,7 +110,16 @@
 
         <!--End mc_embed_signup-->
     </div>
+    <script type="text/javascript">
+      $('.jd-input-container').click(function() {
+        console.log(this);
+        var targetInput = $(this).find('.jd-input-value');
+        var targetSelect = $(this).find('.jd-select-contents')[0];
+        console.log(targetSelect);
+        $(targetSelect).css('visibility', 'visible');
 
+      });
+    </script>
 </body>
 
 </html>

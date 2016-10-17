@@ -1,10 +1,11 @@
 html, body {
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 29px;
+  -webkit-font-smoothing: antialiased;
   color: #FFFFFF;
-  letter-spacing: 0px;
-  line-height: 20px;
+  line-height: 35px;
 
   border: 5px solid #FFFFFF;
   margin: 0;
@@ -24,24 +25,66 @@ html, body {
   padding-bottom: 35px;
 }
 
-.form-text {
-  padding-bottom: 10px;
+input[type="text"], input[type="email"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  width: 200px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 29px;
+  -webkit-font-smoothing: antialiased;
+  color: #FFFFFF;
+  line-height: 35px;
 }
 
-.form-submit {
+input[type="text"]:focus, input[type="email"]:focus {
+  outline: none;
+}
+
+select {
+  visibility: hidden;
+  position: absolute;
+  left: -5000px;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.13em 0.13em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.35em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.35em;
+}
+.chevron.bottom:before {
+	top: 10px;
+	transform: rotate(135deg);
+}
+
+.jd-input-container {
   position: relative;
 }
 
-.email {
-  padding: 5px;
-  border-radius: 3px;
-  font-size: 16px;
-  border: 1px solid #313440;
-  color: #83858c;
-  min-width: 300px;
+.jd-input-value {
+  color: rgba(255,255,255,0.25);
+  cursor: pointer;
 }
 
-.email-submit {
+.jd-select-contents {
+  visibility: hidden;
   position: absolute;
+}
 
+.js-select-contents--show {
+  visibility: visible;
+  left: 0;
+  top: 40px;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 10px;
+  width: 150px;
 }
