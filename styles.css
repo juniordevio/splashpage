@@ -7,7 +7,7 @@ html, body {
   color: #FFFFFF;
   line-height: 35px;
 
-  border: 5px solid #FFFFFF;
+  /*border: 5px solid #FFFFFF;*/
   margin: 0;
 
   background-image: linear-gradient(to right,#ffbf1e,#de1aff);
@@ -73,18 +73,18 @@ select {
   color: rgba(255,255,255,0.25);
   cursor: pointer;
 }
-
-.jd-select-contents {
+.hidden {
   visibility: hidden;
-  position: absolute;
 }
+.jd-select-contents {
+  position: absolute;
 
-.js-select-contents--show {
-  visibility: visible;
   left: 0;
   top: 40px;
-  border: 2px solid white;
+  width: 150px;
+  border: 2px solid #d4d4d4;
   border-radius: 4px;
   padding: 10px;
-  width: 150px;
+  background-color: #d4d4d4;
+  font-size: 23px;
 }

@@ -14,8 +14,6 @@
     <div class="container">
         <img class="logo" src="images/logo_primary.svg" height="75vw" alt="" />
         <!-- <div>Newsletter</div> -->
-
-
         <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup">
             <form action="//juniordev.us14.list-manage.com/subscribe/post?u=888d9087b25cae4ae5665fdca&amp;id=924b5e3a48" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -29,8 +27,17 @@
                     <div>
                         <span class="mc-field-group jd-input-container">
                             <label for="mce-group[1331]">I'm a junior</label>
-                            <span class="jd-input-value">Full Stack <span class="chevron bottom"></span> </span>
-                            <select name="group[1331]" class="REQ_CSS input" id="mce-group[1331]">
+                            <span class="jd-input-container">
+                              <span class="jd-input-value">Full Stack <span class="chevron bottom"></span> </span>
+                              <span class="jd-select-contents hidden">
+                                  <span data-val="4096" class="jd-type-item">Full Stack</span>
+                                  <span data-val="8192" class="jd-type-item">Front End</span>
+                                  <span data-val="16384" class="jd-type-item">Back End</span>
+                                  <span data-val="32768" class="jd-type-item">Mobile</span>
+                                  <span data-val="65536" class="jd-type-item">All of The Thingz</span>
+                              </span>
+                            </span>
+                            <select name="group[1331]" class="REQ_CSS jd-type-select" id="mce-group[1331]">
                                 <option value=""></option>
                                 <option value="4096">Full Stack</option>
                                 <option value="8192">Front End</option>
@@ -41,8 +48,24 @@
                         </span>
                         <span class="mc-field-group">
                             <label for="mce-group[1327]"> developer, living in</label>
-                            <span class="jd-input-value">Melbs <span class="chevron bottom"></span></span>
-                            <select name="group[1327]" class="REQ_CSS" id="mce-group[1327]">
+                            <span class="jd-input-container">
+                              <span class="jd-input-value">Melbs <span class="chevron bottom"></span></span>
+                              <span class="jd-select-contents hidden">
+                                  <span data-val="1" class="jd-lives-item">Victoria</span>
+                                  <span data-val="2" class="jd-lives-item">New South Wales</span>
+                                  <span data-val="4" class="jd-lives-item">South Australia</span>
+                                  <span data-val="8" class="jd-lives-item">Queensland</span>
+                                  <span data-val="16" class="jd-lives-item">Western Australia</span>
+                                  <span data-val="32" class="jd-lives-item">Tasmania</span>
+                                  <span data-val="64" class="jd-lives-item">Northern Territory</span>
+                                  <span data-val="128" class="jd-lives-item">Australian Capital Territory</span>
+                                  <span data-val="256" class="jd-lives-item">United States of America</span>
+                                  <span data-val="512" class="jd-lives-item">United Kingdom</span>
+                                  <span data-val="1024" class="jd-lives-item">New Zealand</span>
+                                  <span data-val="2048" class="jd-lives-item">Other</span>
+                              </span>
+                            </span>
+                            <select name="group[1327]" class="REQ_CSS jd-lives-select" id="mce-group[1327]">
                                 <option value=""></option>
                                 <option value="1">Victoria</option>
                                 <option value="2">New South Wales</option>
@@ -56,7 +79,6 @@
                                 <option value="512">United Kingdom</option>
                                 <option value="1024">New Zealand</option>
                                 <option value="2048">Other</option>
-
                             </select>
                             .
                         </span>
@@ -66,18 +88,18 @@
                         <label for="mce-group[1335]">I'm interested in</label>
                         <span class="jd-input-container">
                           <span class="jd-input-value">All da tings <span class="chevron bottom"></span></span>
-                          <span class="jd-select-contents">
-                              <span>Tutorials</span>
-                              <span>Articles</span>
-                              <span>News</span>
-                              <span>Event Updates</span>
-                              <span>Videos</span>
-                              <span>Jobs</span>
-                              <span>All of the Thingz</span>
+                          <span class="jd-select-contents hidden">
+                              <span data-val="131072" class="jd-interest-item">Tutorials</span>
+                              <span data-val="262144" class="jd-interest-item">Articles</span>
+                              <span data-val="524288" class="jd-interest-item">News</span>
+                              <span data-val="1048576" class="jd-interest-item">Event Updates</span>
+                              <span data-val="2097152" class="jd-interest-item">Videos</span>
+                              <span data-val="4194304" class="jd-interest-item">Jobs</span>
+                              <span data-val="8388608" class="jd-interest-item">All of the Thingz</span>
                           </span>
                         </span>
 
-                        <select name="group[1335]" class="REQ_CSS" id="mce-group[1335]">
+                        <select name="group[1335]" class="REQ_CSS jd-interest-select" id="mce-group[1335]">
                             <option value=""></option>
                             <option value="131072">Tutorials</option>
                             <option value="262144">Articles</option>
@@ -111,13 +133,29 @@
         <!--End mc_embed_signup-->
     </div>
     <script type="text/javascript">
-      $('.jd-input-container').click(function() {
-        console.log(this);
+      $('.jd-input-container').click( function (event) {
+        event.stopPropagation();
         var targetInput = $(this).find('.jd-input-value');
         var targetSelect = $(this).find('.jd-select-contents')[0];
-        console.log(targetSelect);
-        $(targetSelect).css('visibility', 'visible');
+        $(targetSelect).removeClass('hidden');
+      });
 
+      $('.jd-interest-item').click({ dropDownSelector: '.jd-interest-select' }, selectItem);
+      $('.jd-lives-item').click({ dropDownSelector: '.jd-lives-select' }, selectItem);
+      $('.jd-type-item').click({ dropDownSelector: '.jd-type-select' }, selectItem);
+
+      function selectItem(event) {
+        event.stopPropagation();
+        var value = $(this).attr('data-val');
+        $(event.data.dropDownSelector).val(value);
+        var parent = $(this).parent();
+        $(parent).addClass('hidden');
+        $(this).parent().siblings().text($(this).text());
+      }
+
+      //Hide the menus if visible
+      $('html').click(function() {
+        $('.jd-select-contents').addClass('hidden');
       });
     </script>
 </body>
