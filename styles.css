@@ -74,7 +74,7 @@ select {
   cursor: pointer;
 }
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 .jd-select-contents {
   position: absolute;
@@ -98,4 +98,8 @@ select {
   border: 2px solid white;
   border-radius: 4px;
   background-color: transparent;
+}
+
+.jd-submit-button:hover {
+  text-shadow: 4px 4px 2px rgb(0, 0, 0);
 }
