@@ -81,10 +81,10 @@ select {
   left: 0;
   top: 40px;
   width: 150px;
-  border: 2px solid #d4d4d4;
+  border: 2px solid #313440;
   border-radius: 4px;
   padding: 10px;
-  background-color: #d4d4d4;
+  background-color: #313440;
   font-size: 16px;
 }
 
@@ -116,4 +116,3 @@ select {
     background-size: cover;
     background-position: 0 85%;
   }
-  
