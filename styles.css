@@ -1,16 +1,15 @@
 html, body {
   height: 100%;
   /*font-family: 'Montserrat', sans-serif;*/
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Rubik', sans-serif;
   font-size: 29px;
   -webkit-font-smoothing: antialiased;
   color: #FFFFFF;
   line-height: 35px;
-
   /*border: 5px solid #FFFFFF;*/
   margin: 0;
-
-  background-image: linear-gradient(to right,#ffbf1e,#de1aff);
+  /*background-image: linear-gradient(to right,#ffbf1e,#de1aff);*/
 }
 .container {
   height: 100%;
@@ -30,7 +29,8 @@ input[type="text"], input[type="email"] {
   border: none;
   border-bottom: 2px solid white;
   width: 200px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
   font-size: 29px;
   -webkit-font-smoothing: antialiased;
   color: #FFFFFF;
@@ -78,7 +78,6 @@ select {
 }
 .jd-select-contents {
   position: absolute;
-
   left: 0;
   top: 40px;
   width: 150px;
@@ -86,7 +85,12 @@ select {
   border-radius: 4px;
   padding: 10px;
   background-color: #d4d4d4;
-  font-size: 23px;
+  font-size: 16px;
+}
+
+.jd-select-contents span {
+  display: block;
+  cursor: pointer;
 }
 
 .jd-submit-button {
@@ -99,3 +103,12 @@ select {
   border-radius: 4px;
   background-color: transparent;
 }
+
+#granim-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: 0 85%;
+  }

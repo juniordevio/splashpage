@@ -6,12 +6,16 @@
     <title>Junior Dev</title>
     <link rel="stylesheet" href="./styles.css" media="screen" title="no title">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="./granim.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"><canvas id="granim-canvas"></canvas>
+
         <img class="logo" src="images/logo_primary.svg" height="75vw" alt="" />
         <!-- <div>Newsletter</div> -->
         <!-- Begin MailChimp Signup Form -->
@@ -157,7 +161,24 @@
       $('html').click(function() {
         $('.jd-select-contents').addClass('hidden');
       });
+
+      var granimInstance = new Granim({
+          element: '#granim-canvas',
+          name: 'granim',
+          opacity: [1, 1],
+          states : {
+              "default-state": {
+                  gradients: [
+                      ['#ffbf1e', '#de1aff'],
+                      ['#de1aff', '#25f18d']
+                  ],
+                  transitionSpeed: 30000
+              }
+          }
+       });
+
     </script>
+
 </body>
 
 </html>
