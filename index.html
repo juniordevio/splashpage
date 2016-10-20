@@ -141,7 +141,8 @@
         event.stopPropagation();
         var targetInput = $(this).find('.jd-input-value');
         var targetSelect = $(this).find('.jd-select-contents')[0];
-        $(targetSelect).removeClass('hidden');
+        // $(targetSelect).removeClass('hidden');
+        $(targetSelect).css('display', 'block');
       });
 
       $('.jd-interest-item').click({ dropDownSelector: '.jd-interest-select' }, selectItem);
@@ -153,13 +154,15 @@
         var value = $(this).attr('data-val');
         $(event.data.dropDownSelector).val(value);
         var parent = $(this).parent();
-        $(parent).addClass('hidden');
+        // $(parent).addClass('hidden');
+        $(parent).css('display', 'none');
         $(this).parent().siblings().text($(this).text());
       }
 
       //Hide the menus if visible
       $('html').click(function() {
-        $('.jd-select-contents').addClass('hidden');
+        // $('.jd-select-contents').addClass('hidden');
+        $('.jd-select-contents').css('display', 'none');
       });
 
       var granimInstance = new Granim({
