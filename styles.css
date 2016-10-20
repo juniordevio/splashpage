@@ -15,17 +15,17 @@ html, body {
 .container {
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*flex-direction: column;*/
   flex-wrap: wrap;
 }
 
 .content-container {
-  position: absolute;
-  top: 60px;
-  left: 60px;
-  width: 60%;
+  /*position: absolute;*/
+  padding-left: 60px;
+  padding-top: 60px;
+  /*width: 60%;*/
   /*margin: auto;*/
   line-height: 45px;
 }
