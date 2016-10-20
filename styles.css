@@ -20,20 +20,34 @@ html, body {
   flex-wrap: wrap;
 }
 
+.content-container {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 60%;
+  margin: auto;
+  line-height: 45px;
+}
+
 .logo {
-  padding-bottom: 35px;
+  padding-bottom: 30px;
+}
+
+.question-mark {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
 }
 
 input[type="text"], input[type="email"] {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
-  width: 200px;
+  width: 300px;
   font-family: 'Rubik', sans-serif;
-  /*font-family: 'Roboto', sans-serif;*/
   font-size: 29px;
   -webkit-font-smoothing: antialiased;
-  color: #FFFFFF;
+  color: rgba(255,255,255,0.25);
   line-height: 35px;
 }
 
@@ -73,6 +87,7 @@ select {
   color: rgba(255,255,255,0.25);
   cursor: pointer;
 }
+
 .hidden {
   display: none;
 }
@@ -86,7 +101,6 @@ select {
   padding: 10px;
   background-color: #313440;
   font-size: 16px;
-  
 }
 
 .jd-select-contents span {
@@ -95,6 +109,8 @@ select {
 }
 
 .jd-submit-button {
+  width: 50%;
+  margin-top: 30px;
   font-family: 'Roboto', sans-serif;
   font-size: 29px;
   -webkit-font-smoothing: antialiased;
@@ -103,11 +119,11 @@ select {
   border: 2px solid white;
   border-radius: 4px;
   background-color: transparent;
+  padding: 10px;
 }
 
 .jd-submit-button:hover {
-  text-shadow: 4px 4px 2px rgb(0, 0, 0);
-}
+  /*text-shadow: 4px 4px 2px rgb(0, 0, 0);*/}
 
 #granim-canvas {
     position: absolute;
