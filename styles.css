@@ -120,6 +120,7 @@ select {
   cursor: pointer;
   padding: 0 15px;
   line-height: 2.5;
+  transition: border-left .1s ease;
 }
 
 .jd-select-contents span:hover {
