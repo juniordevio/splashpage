@@ -119,7 +119,7 @@ select {
   display: block;
   cursor: pointer;
   padding: 0 15px;
-  line-height: 2.5;
+  line-height: 2.2;
   transition: border-left .1s ease;
 }
 
