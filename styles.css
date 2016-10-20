@@ -87,19 +87,30 @@ select {
 .hidden {
   display: none;
 }
+
+.visuallyHidden {
+  opacity: 0;
+  top: 50px;
+}
+
+.moveDown {
+  top: 55px;
+  height: auto;
+  transition: all .4s ease;
+}
+
 .jd-select-contents {
   position: absolute;
   left: 0;
-  top: 55px;
+  /*top: 55px;*/
   min-width: 250px;
   z-index: 1;
   border-radius: 6px;
   padding: 25px 0;
   background-color: #313440;
   font-size: 16px;
-  display: none;
-  /*max-height: 300px;*/
-  transition: display .5s ease;
+  display: block;
+  transition: all .4s ease;
 }
 
 .jd-select-contents::before {
@@ -120,11 +131,13 @@ select {
   cursor: pointer;
   padding: 0 15px;
   line-height: 2.2;
+  border-left: 0 solid #69f0ae;
   transition: border-left .1s ease;
 }
 
 .jd-select-contents span:hover {
   border-left: 4px solid #69f0ae;
+  transition: border-left .1s ease;
 }
 
 .jd-submit-button {

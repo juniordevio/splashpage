@@ -30,7 +30,7 @@
                             <label for="mce-group[1331]">Hey JuniorDev team, <br>I'm a junior</label>
                             <span class="jd-input-container">
                               <span class="jd-input-value">Full Stack <span class="chevron bottom"></span> </span>
-                            <span class="jd-select-contents hidden">
+                            <span class="jd-select-contents hidden visuallyHidden">
                                   <span data-val="4096" class="jd-type-item">Full Stack</span>
                             <span data-val="8192" class="jd-type-item">Front End</span>
                             <span data-val="16384" class="jd-type-item">Back End</span>
@@ -46,7 +46,7 @@
                             <span class="mc-field-group">
                             <label for="mce-group[1327]">  developer, <br>living in the fine state of </label>
                             <span class="jd-input-container"><span class="jd-input-value">Victoria <span class="chevron bottom"></span></span>
-                            <span class="jd-select-contents hidden">
+                            <span class="jd-select-contents hidden visuallyHidden">
                               <span data-val="1" class="jd-lives-item">Victoria</span>
                               <span data-val="2" class="jd-lives-item">New South Wales</span>
                               <span data-val="4" class="jd-lives-item">South Australia</span>
@@ -101,9 +101,24 @@
         event.stopPropagation();
         var targetInput = $(this).find('.jd-input-value');
         var targetSelect = $(this).find('.jd-select-contents')[0];
-        // $(targetSelect).removeClass('hidden');
-        $(targetSelect).css('display', 'block');
+        show(targetSelect);
       });
+
+      function hide(selector) {
+        $(selector).addClass('visuallyHidden');
+        $(selector).removeClass('moveDown');
+        setTimeout(function () {
+          $(selector).addClass('hidden');
+        }, 200);
+      }
+
+      function show(selector) {
+        $(selector).removeClass('visuallyHidden');
+        $(selector).addClass('moveDown');
+        setTimeout(function () {
+          $(selector).removeClass('hidden');
+        }, 200);
+      }
 
       $('.jd-interest-item').click({ dropDownSelector: '.jd-interest-select' }, selectItem);
       $('.jd-lives-item').click({ dropDownSelector: '.jd-lives-select' }, selectItem);
@@ -114,15 +129,13 @@
         var value = $(this).attr('data-val');
         $(event.data.dropDownSelector).val(value);
         var parent = $(this).parent();
-        // $(parent).addClass('hidden');
-        $(parent).css('display', 'none');
+        hide(parent);
         $(this).parent().siblings().text($(this).text());
       }
 
       //Hide the menus if visible
       $('html').click(function() {
-        // $('.jd-select-contents').addClass('hidden');
-        $('.jd-select-contents').css('display', 'none');
+        hide('.jd-select-contents');
       });
 
       var granimInstance = new Granim({
