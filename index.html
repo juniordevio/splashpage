@@ -99,7 +99,7 @@
     <script type="text/javascript">
       $('.jd-input-container').click( function (event) {
         event.stopPropagation();
-        var targetInput = $(this).find('.jd-input-value');
+        // var targetInput = $(this).find('.jd-input-value');
         var targetSelect = $(this).find('.jd-select-contents')[0];
         show(targetSelect);
       });
@@ -120,7 +120,7 @@
         }, 200);
       }
 
-      $('.jd-interest-item').click({ dropDownSelector: '.jd-interest-select' }, selectItem);
+      // $('.jd-interest-item').click({ dropDownSelector: '.jd-interest-select' }, selectItem);
       $('.jd-lives-item').click({ dropDownSelector: '.jd-lives-select' }, selectItem);
       $('.jd-type-item').click({ dropDownSelector: '.jd-type-select' }, selectItem);
 
@@ -130,7 +130,9 @@
         $(event.data.dropDownSelector).val(value);
         var parent = $(this).parent();
         hide(parent);
-        $(this).parent().siblings().text($(this).text());
+        var inputValue = $(this).parent().siblings();
+        $(inputValue).text($(this).text());
+        $(inputValue).css('color', '#69f0ae');
       }
 
       //Hide the menus if visible
