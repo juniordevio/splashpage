@@ -38,7 +38,6 @@ input[type="text"], input[type="email"] {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
-  width: 300px;
   font-family: 'Rubik', sans-serif;
   font-size: 29px;
   -webkit-font-smoothing: antialiased;
@@ -166,6 +165,13 @@ select {
   background-position: 0 85%;
 }
 
+input[type="email"] {
+  color: #69f0ae;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.25);
+}
 
 
 
