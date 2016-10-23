@@ -113,10 +113,10 @@
       }
 
       function show(selector) {
-        $(selector).removeClass('visuallyHidden');
-        $(selector).addClass('moveDown');
+        $(selector).removeClass('hidden');
         setTimeout(function () {
-          $(selector).removeClass('hidden');
+          $(selector).removeClass('visuallyHidden');
+          $(selector).addClass('moveDown');
         }, 200);
       }
 
