@@ -143,22 +143,20 @@ select {
 .jd-submit-button {
   margin-top: 30px;
   font-family: 'Roboto', sans-serif;
-  font-size: 29px;
+  font-size: 20px;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
-  color: #FFFFFF;
-  line-height: 35px;
-  border: 4px solid white;
+  color: #ffffff;
   border-radius: 45px;
-  background-color: transparent;
-  padding: 15px;
-  transition: padding .2s ease;
+  border: none;
+  background-color: #313440;
+  padding: 18px;
+  transition: all .1s ease;
+  cursor: pointer;
 }
 
 .jd-submit-button:hover {
-  /*text-shadow: 4px 4px 2px rgb(0, 0, 0);*/
-  /*box-shadow: 4px 4px 10px 0px rgba(49,52,64,0.75);*/
-  cursor: pointer;
-  padding: 18px
+  transform: scale(1.05);
 }
 
 #granim-canvas {
