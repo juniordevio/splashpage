@@ -99,7 +99,6 @@
     <script type="text/javascript">
       $('.jd-input-container').click( function (event) {
         event.stopPropagation();
-        // var targetInput = $(this).find('.jd-input-value');
         var targetSelect = $(this).find('.jd-select-contents')[0];
         show(targetSelect);
       });
@@ -120,7 +119,6 @@
         }, 200);
       }
 
-      // $('.jd-interest-item').click({ dropDownSelector: '.jd-interest-select' }, selectItem);
       $('.jd-lives-item').click({ dropDownSelector: '.jd-lives-select' }, selectItem);
       $('.jd-type-item').click({ dropDownSelector: '.jd-type-select' }, selectItem);
 
