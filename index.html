@@ -29,7 +29,7 @@
                             <span class="mc-field-group jd-input-container">
                             <label for="mce-group[1331]">Hey JuniorDev team, <br>I'm a junior</label>
                             <span class="jd-input-container">
-                              <span class="jd-input-value">Full Stack <span class="chevron bottom"></span> </span>
+                              <span class="jd-input-value">Full Stack <span class="jd-chevron"></span> </span>
                             <span class="jd-select-contents hidden visuallyHidden">
                                   <span data-val="4096" class="jd-type-item">Full Stack</span>
                             <span data-val="8192" class="jd-type-item">Front End</span>
@@ -45,7 +45,7 @@
                             </span>
                             <span class="mc-field-group">
                             <label for="mce-group[1327]">  developer, <br>living in the fine state of </label>
-                            <span class="jd-input-container"><span class="jd-input-value">Victoria <span class="chevron bottom"></span></span>
+                            <span class="jd-input-container"><span class="jd-input-value">Victoria <span class="jd-chevron"></span></span>
                             <span class="jd-select-contents hidden visuallyHidden">
                               <span data-val="1" class="jd-lives-item">Victoria</span>
                               <span data-val="2" class="jd-lives-item">New South Wales</span>
@@ -136,6 +136,18 @@
       //Hide the menus if visible
       $('html').click(function() {
         hide('.jd-select-contents');
+        $('.jd-chevron').removeClass('jd-chevron--rotate');
+
+      });
+
+      $('.jd-input-value').hover( function(){
+        $(this).find('.jd-chevron').addClass('jd-chevron--scale');
+      }, function() {
+        $(this).find('.jd-chevron').removeClass('jd-chevron--scale');
+      })
+
+      $('.jd-input-value').click(function() {
+        $(this).find('.jd-chevron').addClass('jd-chevron--rotate');
       });
 
       var granimInstance = new Granim({
