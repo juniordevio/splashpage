@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Junior Dev</title>
+    <link rel="stylesheet" href="./styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="./granim.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="granim-canvas"></canvas>
+        <div class="content-container">
+
+            <img class="logo" src="images/logo_primary.svg" height="70vw" alt="" />
+            <div><h2> Thank you!</h2></div> You just did an awesome thing. *High Five*
+
+            <p>But it's not over yet!
+
+            We've sent a confirmation email to you, you've just got to hit that link and then we're all good!
+
+            Find out more about what we're doing and how you can get involved over on Twitter <a href="https://twitter.com/juniordev_io">@JuniorDev_io</p>
+
+        </div>
+
+
+    <script type="text/javascript">
+      var granimInstance = new Granim({
+          element: '#granim-canvas',
+          name: 'granim',
+          opacity: [1, 1],
+          states : {
+              "default-state": {
+                  gradients: [
+                      ['#25f18d', '#de1aff'],
+                      ['#de1aff', '#ffbf1e']
+                  ],
+                  transitionSpeed: 30000
+              }
+          }
+       });
+    </script>
+
+</body>
+
+</html>
