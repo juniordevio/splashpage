@@ -139,16 +139,24 @@ select {
   font-size: 20px;
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
-  color: #ffffff;
   border-radius: 45px;
   border: none;
-  background-color: #313440;
   padding: 18px;
   transition: all .1s ease;
+}
+
+.jd-submit-button--disabled {
+  color: rgba(255,255,255,.25);
+  background-color: rgba(49,52,64,.25);
+}
+
+.jd-submit-button--enabled {
+  color: rgba(255,255,255,1);
+  background-color: rgba(49,52,64,1);
   cursor: pointer;
 }
 
-.jd-submit-button:hover {
+.jd-submit-button--enabled:hover {
   transform: scale(1.05);
 }
 
