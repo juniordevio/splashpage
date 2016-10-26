@@ -1,0 +1,15 @@
+<svg width="36" height="34" viewBox="0 0 36 34" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    lines
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <rect fill="#FBC02D" width="8" height="4" rx="2"/>
+    <rect fill="#FFF" x="12" width="14" height="4" rx="2"/>
+    <rect fill="#FFF" y="30" width="16" height="4" rx="2"/>
+    <rect fill="#EA80FC" x="20" y="30" width="8" height="4" rx="2"/>
+    <rect fill="#FFF" x="6" y="10" width="16" height="4" rx="2"/>
+    <rect fill="#69F0AE" x="26" y="10" width="10" height="4" rx="2"/>
+    <rect fill="#FFF" x="20" y="20" width="16" height="4" rx="2"/>
+    <rect fill="#FF5252" x="6" y="20" width="10" height="4" rx="2"/>
+  </g>
+</svg>
