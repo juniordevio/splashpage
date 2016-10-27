@@ -135,7 +135,7 @@ select {
 
 .jd-submit-button {
   margin-top: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 20px;
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
@@ -265,7 +265,7 @@ input[type="email"]::-webkit-input-placeholder {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-    .container-content--position {
+    /*.container-content--position {
       padding-left: 30px;
       padding-top: 30px;
       line-height: 45px;
@@ -289,5 +289,5 @@ input[type="email"]::-webkit-input-placeholder {
         background-color: #313440;
         padding: 38px;
         transition: all .1s ease;
-       }
+       }*/
 }
