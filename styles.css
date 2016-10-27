@@ -246,3 +246,40 @@ input[type="email"]::-webkit-input-placeholder {
 .jd-tooltip[data-tooltip-position="left"]:hover::after {
   transform: translate3d(0px, -50%, 0);
 }
+
+/*Responsive Design*/
+
+/* Portrait */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .container-content--position {
+      padding-left: 30px;
+      padding-top: 30px;
+      line-height: 45px;
+      font-size: 3em;
+      line-height: 2em;
+    }
+
+      #jd-logo {
+        padding-bottom: 30px;
+        height: 5em;
+      }
+
+      .jd-tooltip{
+        display: none;
+      }
+
+      .jd-submit-button{
+        margin-top: 30px;
+        font-size: 34px;
+        border: none;
+        background-color: #313440;
+        padding: 38px;
+        transition: all .1s ease;
+       }
+}
