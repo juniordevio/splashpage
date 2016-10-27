@@ -8,16 +8,21 @@ html, body {
   margin: 0;
 }
 
+.jd-block {
+  display: block;
+}
+
 .container {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.container-content--position {
+.container-content {
   padding-left: 60px;
   padding-top: 60px;
   line-height: 45px;
+  max-width: 600px;
 }
 
 #jd-logo {
@@ -77,6 +82,7 @@ select {
   border-bottom: 2px solid white;
   color: rgba(255,255,255,0.25);
   cursor: pointer;
+  margin-right: .25em;
 }
 
 .hidden {
