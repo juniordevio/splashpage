@@ -6,17 +6,43 @@ html, body {
   color: #FFFFFF;
   line-height: 28px;
   margin: 0;
+  }
+
+.container {
+  background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
+  background-size: 600% 600%;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-animation: AnimationName 49s ease infinite;
+  -moz-animation: AnimationName 49s ease infinite;
+  -o-animation: AnimationName 49s ease infinite;
+  animation: AnimationName 49s ease infinite;
 }
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 90%}
+      80%{background-position:9% 9%}
+  }
 
 .jd-block {
   display: block;
 }
-
-/*.container {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}*/
 
 
 #jd-logo {
@@ -32,8 +58,6 @@ html, body {
   line-height: 45px;
   max-width: 600px;
 }
-
-
 
 input[type="text"], input[type="email"] {
   background-color: transparent;
@@ -171,99 +195,12 @@ select {
   transform: scale(1.05);
 }
 
-#granim-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-position: 0 85%;
-}
-
 input[type="email"] {
   color: #69f0ae;
 }
 
 input[type="email"]::-webkit-input-placeholder {
   color: rgba(255,255,255,0.25);
-}
-
-/*About Us Tool Tip on Roll Over*/
-
-.jd-tooltip {
-  position: absolute;
-  bottom: 60px;
-  right: 60px;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.jd-tooltip::after {
-  background-color: #313440;
-  border-radius: 6px;
-  color: #fff;
-  content: attr(data-tooltip-title) " ";
-  font-weight: normal;
-  min-width: 500px;
-  padding: 8px 8px;
-  text-align: center;
-  text-transform: none;
-}
-
-.jd-tooltip::before {
-  width: 0;
-  height: 0;
-  content: "";
-}
-
-.jd-tooltip::before,
-.jd-tooltip::after {
-  position: absolute;
-  transition: opacity 250ms ease 0ms, transform 250ms ease 0ms;
-  transform-style: preserve-3d;
-  opacity: 0;
-  z-index: -1;
-}
-
-.jd-tooltip[data-tooltip-position="left"]::after {
-  top: 50%;
-}
-
-.jd-tooltip[data-tooltip-position="left"]::after {
-  transform: translate3d(10px, -50%, 0);
-}
-
-.jd-tooltip[data-tooltip-position="left"]::after {
-  right: calc(100% + 10px);
-}
-
-/* Pointers */
-
-.jd-tooltip[data-tooltip-position="left"]::before {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  top: 50%;
-}
-
-.jd-tooltip[data-tooltip-position="left"]::before {
-  transform: translate3d(10px, -50%, 0);
-}
-
-.jd-tooltip[data-tooltip-position="left"]::before {
-  border-left: 7px solid #323a45;
-  right: calc(100% + 3px);
-}
-
-.jd-tooltip:hover::before,
-.jd-tooltip:hover::after {
-  opacity: 1;
-  z-index: 100;
-}
-
-.jd-tooltip[data-tooltip-position="left"]:hover::before,
-.jd-tooltip[data-tooltip-position="left"]:hover::after {
-  transform: translate3d(0px, -50%, 0);
 }
 
 /*Responsive Design*/
