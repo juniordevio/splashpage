@@ -276,12 +276,12 @@ input[type="email"]::-webkit-input-placeholder {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-    /*.container-content--position {
-      padding-left: 30px;
-      padding-top: 30px;
-      line-height: 45px;
-      font-size: 3em;
-      line-height: 2em;
+    .container-content {
+      padding-left: 60px;
+      padding-right: 30px;
+      line-height: 95px;
+      font-size: 2.3em;
+      max-width: 100%;
     }
 
       #jd-logo {
@@ -293,12 +293,15 @@ input[type="email"]::-webkit-input-placeholder {
         display: none;
       }
 
-      .jd-submit-button{
-        margin-top: 30px;
-        font-size: 34px;
-        border: none;
-        background-color: #313440;
-        padding: 38px;
-        transition: all .1s ease;
-       }*/
+      .jd-select-contents {
+        font-size: 30px;
+        padding: 25px 10px;
+        min-width: 250px;
+      }
+
+
+      input[type="text"], input[type="email"] {
+        font-size: 54px;
+        -webkit-font-smoothing: antialiased;
+      }
 }
