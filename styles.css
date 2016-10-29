@@ -8,6 +8,21 @@ html, body {
   margin: 0;
   }
 
+  a {
+    color: #69F0AE;
+    text-decoration: none;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+
 .container {
   background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
   background-size: 600% 600%;
@@ -19,37 +34,15 @@ html, body {
   animation: GradientBackground 49s ease infinite;
 }
 
-  @-webkit-keyframes GradientBackground {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 100%}
-      100%{background-position:9% 0%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 100%}
-      100%{background-position:9% 0%}
-  }
-  @-o-keyframes AnimationName {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 100%}
-      100%{background-position:9% 0%}
-  }
-  @keyframes AnimationName {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 90%}
-      80%{background-position:9% 9%}
-  }
-
-.jd-block {
-  display: block;
-}
-
-
 #jd-logo {
   padding-left: 60px;
   padding-top: 60px;
   padding-bottom: 30px;
   height: 2em;
+}
+
+.jd-block {
+  display: block;
 }
 
 .container-content {
@@ -203,6 +196,29 @@ input[type="email"] {
 input[type="email"]::-webkit-input-placeholder {
   color: rgba(255,255,255,0.25);
 }
+
+/*Gradient Background Animation*/
+
+  @-webkit-keyframes GradientBackground {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 90%}
+      80%{background-position:9% 9%}
+  }
 
 /*Responsive Design*/
 
