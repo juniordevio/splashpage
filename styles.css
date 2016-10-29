@@ -13,13 +13,13 @@ html, body {
   background-size: 600% 600%;
   min-width: 100%;
   min-height: 100%;
-  -webkit-animation: AnimationName 49s ease infinite;
-  -moz-animation: AnimationName 49s ease infinite;
-  -o-animation: AnimationName 49s ease infinite;
-  animation: AnimationName 49s ease infinite;
+  -webkit-animation: GradientBackground 49s ease infinite;
+  -moz-animation: GradientBackground 49s ease infinite;
+  -o-animation: GradientBackground 49s ease infinite;
+  animation: GradientBackground 49s ease infinite;
 }
 
-  @-webkit-keyframes AnimationName {
+  @-webkit-keyframes GradientBackground {
       0%{background-position:9% 0%}
       50%{background-position:92% 100%}
       100%{background-position:9% 0%}
@@ -170,8 +170,9 @@ select {
 
 .jd-submit-button {
   margin-top: 30px;
+  margin-bottom: 30px;
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
   border-radius: 45px;
@@ -222,8 +223,8 @@ input[type="email"]::-webkit-input-placeholder {
     }
 
       #jd-logo {
-        padding-bottom: 30px;
-        height: 5em;
+        padding-bottom: 40px;
+        height: 4em;
       }
 
       .jd-tooltip{
@@ -240,5 +241,12 @@ input[type="email"]::-webkit-input-placeholder {
       input[type="text"], input[type="email"] {
         font-size: 54px;
         -webkit-font-smoothing: antialiased;
+      }
+
+      .jd-submit-button {
+        margin-top: 30px;
+        font-size: 50px;
+        border-radius: 55px;
+        padding: 28px;
       }
 }
