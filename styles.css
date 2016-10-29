@@ -12,23 +12,28 @@ html, body {
   display: block;
 }
 
-.container {
+/*.container {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+}*/
+
+
+#jd-logo {
+  padding-left: 60px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  height: 2em;
 }
 
 .container-content {
   padding-left: 60px;
-  padding-top: 60px;
+  padding-right: 10px;
   line-height: 45px;
   max-width: 600px;
 }
 
-#jd-logo {
-  padding-bottom: 30px;
-  height: 2em;
-}
+
 
 input[type="text"], input[type="email"] {
   background-color: transparent;
