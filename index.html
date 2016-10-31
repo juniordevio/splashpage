@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>Junior Dev</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link rel="stylesheet" href="./styles.css" media="screen" title="no title">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
@@ -173,6 +172,7 @@
 
       $('#mce-EMAIL').keyup( function () {
         var emailRegEx = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        console.log(emailRegEx.test($('#mce-EMAIL').val()));
         if (emailRegEx.test($('#mce-EMAIL').val())) {
           $('#mc-embedded-subscribe').removeClass('jd-submit-button--disabled');
           $('#mc-embedded-subscribe').addClass('jd-submit-button--enabled');

@@ -191,7 +191,6 @@ select {
 
 input[type="email"] {
   color: #69f0ae;
-  width: 286px;
 }
 
 input[type="email"]::-webkit-input-placeholder {
@@ -231,16 +230,7 @@ input[type="email"]::-webkit-input-placeholder {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  #jd-logo {
-    padding-left: 20px;
-    height: 1.7em;
-  }
-
-  .container-content {
-    padding-left: 20px;
-  }
-
-    /*.container-content {
+    .container-content {
       padding-left: 60px;
       padding-right: 30px;
       line-height: 95px;
@@ -274,5 +264,5 @@ input[type="email"]::-webkit-input-placeholder {
         font-size: 50px;
         border-radius: 55px;
         padding: 28px;
-      }*/
+      }
 }
