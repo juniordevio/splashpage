@@ -18,7 +18,7 @@
             <div id="mc_embed_signup">
                 <form action="//juniordev.us14.list-manage.com/subscribe/post?u=888d9087b25cae4ae5665fdca&amp;id=924b5e3a48" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
-                        <div>
+                        <div class="jd-block">
                             <span class="mc-field-group jd-block">
                               <label for="mce-group[1331]">Hey JuniorDev team,</label>
                               <span class="jd-block">I'm a junior
@@ -74,10 +74,10 @@
                               </select>
                             </span>
                         </div>
-                        <div class="mc-field-group">
+                        <div class="mc-field-group jd-block">
                             <label for="mce-EMAIL">I'm interested in the latest news, articles, tutorials, and events for developers like me!
-                                 You can email me quality sh!t monthly at </label>
-                            <input type="email" placeholder="notafake@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL"> .
+                                 You can email me quality content monthly at </label>
+                            <input type="email" placeholder="notafake@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
                         </div>
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -112,6 +112,11 @@
         hide(element);
 
         var targetSelect = $(this).siblings()[0];
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          console.log('mobile');
+          var top = $(this).position().top + 45;
+          $(targetSelect).css('top', top + 'px');
+        }
         show(targetSelect);
       });
 

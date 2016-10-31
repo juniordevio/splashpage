@@ -240,6 +240,27 @@ input[type="email"]::-webkit-input-placeholder {
     padding-left: 20px;
   }
 
+  body {
+    font-size: 26px;
+  }
+
+  .jd-block {
+    display: inline;
+  }
+
+  .jd-input-container {
+    position: inherit;
+  }
+
+  .jd-select-contents {
+    width: 100%;
+    text-align: center;
+  }
+
+  .jd-select-contents::before {
+    background: transparent;
+  }
+
     /*.container-content {
       padding-left: 60px;
       padding-right: 30px;
