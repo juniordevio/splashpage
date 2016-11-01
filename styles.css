@@ -45,6 +45,10 @@ html, body {
   display: block;
 }
 
+.jd-greeting {
+  display: block;
+}
+
 .container-content {
   padding-left: 60px;
   padding-right: 10px;
