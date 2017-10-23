@@ -29,7 +29,7 @@ img#person1 {
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (2fr)[3] 1fr 4fr;
-  grid-template-rows: repeat(3, 2fr) 1fr 4fr;
+  grid-template-rows: repeat(3, 2fr) 1fr 2fr;
   grid-gap: 15px;
 }
 
@@ -67,7 +67,6 @@ img#person1 {
 .card:nth-child(2) {
   grid-column: 1 / 3;
   text-align: center;
-  fill-opacity: .50;
 }
 
 .card:nth-child(3) {
@@ -98,12 +97,12 @@ img#person1 {
   grid-column: 1 / 4;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  max-height: 50%;
+  /* max-height: 50%; */
 }
 
 .card:nth-child(12) {
   grid-column: 4 / 5;
-  max-height: 50%;
+  /* max-height: 50%; */
 }
 
 @media (max-width: 550px) {
@@ -116,7 +115,8 @@ img#person1 {
   .card:nth-child(6),
   .card:nth-child(7),
   .card:nth-child(8),
-  .card:nth-child(11) {
+  .card:nth-child(11),
+  .card:nth-child(12) {
     display: none;
   }
   img {
