@@ -1,36 +1,35 @@
 html {
-min-height: 100%;
+  min-height: 100%;
 }
 
 body {
   height: 100%;
-  font-family: 'Rubik', sans-serif;  
+  font-family: 'Rubik', sans-serif;
   background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
   color: #313440;
   border: 15px solid transparent;
-  -webkit-font-smoothing: antialiased;  
+  -webkit-font-smoothing: antialiased;
 }
 
 img#person {
-animation-duration: 1.5s;
-animation-delay: 3s;
-animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
 }
 
 img#person1 {
-animation-duration: 1.8s;
-animation-delay: 4s;
-animation-iteration-count: infinite;
+  animation-duration: 1.8s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
 }
-
 
 .contain {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (2fr)[3] 1fr 4fr;
-      grid-template-rows: repeat(3, 2fr) 1fr 4fr;
+  grid-template-rows: repeat(3, 2fr) 1fr 4fr;
   grid-gap: 15px;
 }
 
@@ -42,19 +41,19 @@ animation-iteration-count: infinite;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #FFF;
-  -khtml-opacity:.80; 
-  -moz-opacity:.80; 
-  -ms-filter:”alpha(opacity=80)”;
-   filter:alpha(opacity=8);
-   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.8);
-   opacity:.98; 
-   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+  -khtml-opacity: .80;
+  -moz-opacity: .80;
+  -ms-filter: ”alpha(opacity=80)”;
+  filter: alpha(opacity=8);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.8);
+  opacity: .98;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
 .card:nth-child(1) {
@@ -68,8 +67,8 @@ animation-iteration-count: infinite;
 .card:nth-child(2) {
   grid-column: 1 / 3;
   text-align: center;
-   fill-opacity: .50;
-    }
+  fill-opacity: .50;
+}
 
 .card:nth-child(3) {
   grid-column: 3 / 5;
@@ -98,8 +97,8 @@ animation-iteration-count: infinite;
 .card:nth-child(11) {
   grid-column: 1 / 4;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
-      max-height: 50%;
+  justify-content: space-around;
+  max-height: 50%;
 }
 
 .card:nth-child(12) {
@@ -111,9 +110,7 @@ animation-iteration-count: infinite;
   .contain {
     display: block;
     grid-gap: 5px;
-    
   }
-
   .card:nth-child(3),
   .card:nth-child(5),
   .card:nth-child(6),
@@ -122,44 +119,43 @@ animation-iteration-count: infinite;
   .card:nth-child(11) {
     display: none;
   }
-
   img {
     width: 30%;
   }
 }
 
-  a {
-    color: #69F0AE;
-    text-decoration: none;
-  }
+a {
+  color: #69F0AE;
+  text-decoration: none;
+}
 
-  h3 {
-    margin-top: 10px;
-  }
+h3 {
+  margin-top: 10px;
+}
 
-  p {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
-  .container {
-    background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
-    background-size: 600% 600%;
-    min-width: 100%;
-    min-height: 100%;
-    -webkit-animation: GradientBackground 49s ease infinite;
-    -moz-animation: GradientBackground 49s ease infinite;
-    -o-animation: GradientBackground 49s ease infinite;
-    animation: GradientBackground 49s ease infinite;
-  }
-  
-  #jd-logo {
-    padding-left: 60px;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    height: 2em;
-  }
-  
+.container {
+  background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
+  background-size: 600% 600%;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-animation: GradientBackground 49s ease infinite;
+  -moz-animation: GradientBackground 49s ease infinite;
+  -o-animation: GradientBackground 49s ease infinite;
+  animation: GradientBackground 49s ease infinite;
+}
+
+#jd-logo {
+  padding-left: 60px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  height: 2em;
+}
+
 .jd-block {
   display: block;
 }
@@ -176,28 +172,30 @@ animation-iteration-count: infinite;
 }
 
 .container-content-thankyou {
-font-size: 2rem;
-color: white;
-height: 100%;
-max-height: 100%;
-padding-left: 60px;
-padding-right: 10px;
-line-height: 45px;
-max-width: 600px;
+  font-size: 2rem;
+  color: white;
+  height: 100%;
+  max-height: 100%;
+  padding-left: 60px;
+  padding-right: 10px;
+  line-height: 45px;
+  max-width: 600px;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
   font-family: 'Rubik', sans-serif;
   font-size: 29px;
   -webkit-font-smoothing: antialiased;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
   line-height: 35px;
 }
 
-input[type="text"]:focus, input[type="email"]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus {
   outline: none;
 }
 
@@ -208,17 +206,17 @@ select {
 }
 
 .jd-chevron {
-    border-style: solid;
-    border-width: 0 0.13em 0.13em 0;
-    content: '';
-    display: inline-block;
-    height: 0.35em;
-    left: 0.15em;
-    position: relative;
-    top: 15px;
-    transform: rotate(45deg);
-    vertical-align: top;
-    width: 0.35em;
+  border-style: solid;
+  border-width: 0 0.13em 0.13em 0;
+  content: '';
+  display: inline-block;
+  height: 0.35em;
+  left: 0.15em;
+  position: relative;
+  top: 15px;
+  transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.35em;
   transition: all .2s ease;
 }
 
@@ -236,7 +234,7 @@ select {
 
 .jd-input-value {
   border-bottom: 2px solid white;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
   cursor: pointer;
   margin-right: .25em;
 }
@@ -309,13 +307,13 @@ select {
 }
 
 .jd-submit-button--disabled {
-  color: rgba(255,255,255,.25);
-  background-color: rgba(49,52,64,.25);
+  color: rgba(255, 255, 255, .25);
+  background-color: rgba(49, 52, 64, .25);
 }
 
 .jd-submit-button--enabled {
-  color: rgba(255,255,255,1);
-  background-color: rgba(49,52,64,1);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(49, 52, 64, 1);
   cursor: pointer;
 }
 
@@ -329,66 +327,85 @@ input[type="email"] {
 }
 
 input[type="email"]::-webkit-input-placeholder {
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
+
 
 /*Gradient Background Animation*/
 
-  @-webkit-keyframes GradientBackground {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 100%}
-      100%{background-position:9% 0%}
+@-webkit-keyframes GradientBackground {
+  0% {
+    background-position: 9% 0%
   }
-  @-moz-keyframes AnimationName {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 100%}
-      100%{background-position:9% 0%}
+  50% {
+    background-position: 92% 100%
   }
-  @-o-keyframes AnimationName {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 100%}
-      100%{background-position:9% 0%}
+  100% {
+    background-position: 9% 0%
   }
-  @keyframes AnimationName {
-      0%{background-position:9% 0%}
-      50%{background-position:92% 90%}
-      80%{background-position:9% 9%}
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 9% 0%
   }
+  50% {
+    background-position: 92% 100%
+  }
+  100% {
+    background-position: 9% 0%
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 9% 0%
+  }
+  50% {
+    background-position: 92% 100%
+  }
+  100% {
+    background-position: 9% 0%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 9% 0%
+  }
+  50% {
+    background-position: 92% 90%
+  }
+  80% {
+    background-position: 9% 9%
+  }
+}
+
 
 /*Responsive Design*/
 
+
 /* Portrait */
 
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   #jd-logo {
     padding-left: 20px;
     height: 1.7em;
   }
-
   body {
     font-size: 26px;
   }
-
   .jd-block {
     display: inline;
   }
-
   .jd-input-container {
     position: inherit;
   }
-
   .jd-select-contents {
     width: 100%;
     text-align: center;
   }
-
   .jd-select-contents::before {
     background: transparent;
   }
-  
 }
