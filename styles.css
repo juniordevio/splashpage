@@ -97,31 +97,28 @@ img#person1 {
   grid-column: 1 / 4;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  /* max-height: 50%; */
 }
 
 .card:nth-child(12) {
   grid-column: 4 / 5;
-  /* max-height: 50%; */
 }
 
 @media (max-width: 550px) {
   .contain {
     display: block;
-    grid-gap: 5px;
   }
-  .card:nth-child(3),
-  .card:nth-child(5),
-  .card:nth-child(6),
-  .card:nth-child(7),
-  .card:nth-child(8),
-  .card:nth-child(11),
-  .card:nth-child(12) {
-    display: none;
+
+  .card {
+    margin: 10px;
   }
-  img {
-    width: 30%;
-  }
+}
+
+.card>a {
+  color: #313440;
+}
+.card>a:hover {
+  transition: color 0.5s ease-in;    
+  color: #69F0AE;
 }
 
 a {
@@ -136,6 +133,12 @@ h3 {
 p {
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 1.4rem;
+  
 }
 
 .container {
