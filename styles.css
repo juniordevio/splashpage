@@ -107,7 +107,6 @@ img#person1 {
   .contain {
     display: block;
   }
-
   .card {
     margin: 10px;
   }
@@ -116,8 +115,9 @@ img#person1 {
 .card>a {
   color: #313440;
 }
+
 .card>a:hover {
-  transition: color 0.5s ease-in;    
+  transition: color 0.5s ease-in;
   color: #69F0AE;
 }
 
@@ -138,7 +138,6 @@ p {
 pre {
   white-space: pre-wrap;
   font-size: 1.4rem;
-  
 }
 
 .container {
