@@ -167,10 +167,9 @@ pre {
 }
 
 .container-content {
-  padding-left: 60px;
-  padding-right: 10px;
+  /* padding-right: 10px; */
   line-height: 45px;
-  max-width: 600px;
+  max-width: 750px;
 }
 
 .container-content-thankyou {
