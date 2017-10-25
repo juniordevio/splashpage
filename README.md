@@ -22,12 +22,14 @@ The production environment is available at http://juniordev.io/
 ### How to
 
 To contribute
-1. Clone this repository off the master branch.
-2. Make a branch following this syntax: dev-githubUsername-description
-  * The branch this readme was introduced on was dev-egglestona-issue5-update-readme
-3. Add and commit changes using ```git add .``` and ```git commit -m [message]```
-4. Make a pull request with ```master``` as the target branch
-5. Add your name below to the list of contributors!
+1. Fork this repository into your own github account
+2. Clone this repository off the master branch.
+3. Make a branch following this syntax: dev-githubUsername-description
+    * The branch this readme was introduced on was dev-egglestona-issue5-update-readme
+4. Add and commit changes using ```git add .``` and ```git commit -m [message]```
+5. Make a pull request with ```master``` as the BASE branch, with your changes as the HEAD branch
+    * Make sure you compare across forks
+6. Add your name below to the list of contributors!
 
 ### Contributors
 
