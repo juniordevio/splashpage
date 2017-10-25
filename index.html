@@ -39,7 +39,7 @@
                     </span>
                     developer,
                   </span>
-                  <select name="group[1331]" class="REQ_CSS jd-type-select" id="mce-group[1331]">
+                  <select name="group[1331]" class="REQ_CSS jd-type-select required" id="mce-group[1331]">
                     <option value=""></option>
                     <option value="512">Full Stack</option>
                     <option value="1024">Front End</option>
@@ -52,7 +52,7 @@
                     <span class="jd-input-value location">
                       insert your location here
                       <span class="jd-chevron"></span>
-                    </span>
+                    </span>          
                     <span class="jd-select-contents hidden visuallyHidden hiddenFlag location-contents">
                       <span data-val="1" class="jd-lives-item">Victoria</span>
                       <span data-val="2" class="jd-lives-item">New South Wales</span>
@@ -63,9 +63,9 @@
                       <span data-val="64" class="jd-lives-item">Northern Territory</span>
                       <span data-val="128" class="jd-lives-item">Australian Capital Territory</span>
                       <span data-val="256" class="jd-lives-item">Rest Of World</span>
-                    </span>
+                    </span>                
                   </span>
-                  <select name="group[1327]" class="REQ_CSS jd-lives-select" id="mce-group[1327]">
+                  <select name="group[1327]" class="REQ_CSS jd-lives-select required" id="mce-group[1327]">
                     <option value=""></option>
                     <option value="1">Victoria</option>
                     <option value="2">New South Wales</option>
@@ -241,6 +241,7 @@ With each event we continue to meet engaged Junior Developers, who are learning,
       var inputValue = $(this).parent().siblings();
       $(inputValue).text($(this).text());
       $(inputValue).css('color', '#69f0ae');
+      enableSubmit();
     }
 
     //Hide the menus if visible
@@ -257,10 +258,13 @@ With each event we continue to meet engaged Junior Developers, who are learning,
       event.stopPropagation();
     })
 
-    $('#mce-EMAIL').keyup(function () {
+    //Check if submit button should be enable
+    function enableSubmit(event) {
+      var selectStack = $('.jd-lives-select').val();
+      var selectLocation = $('.jd-type-select').val();
       var emailRegEx =
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-      if (emailRegEx.test($('#mce-EMAIL').val())) {
+      if (emailRegEx.test($('#mce-EMAIL').val()) && selectStack && selectLocation) {
         $('#mc-embedded-subscribe').removeClass('jd-submit-button--disabled');
         $('#mc-embedded-subscribe').addClass('jd-submit-button--enabled');
         $('#mc-embedded-subscribe').prop('disabled', false);
@@ -271,7 +275,9 @@ With each event we continue to meet engaged Junior Developers, who are learning,
           $('#mc-embedded-subscribe').prop('disabled', true);
         }
       }
-    });
+    }
+
+    $('#mce-EMAIL').keyup(enableSubmit);
 
     // GA code
     (function (i, s, o, g, r, a, m) {
