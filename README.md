@@ -27,9 +27,10 @@ To contribute
 3. Make a branch following this syntax: dev-githubUsername-description
     * The branch this readme was introduced on was dev-egglestona-issue5-update-readme
 4. Add and commit changes using ```git add .``` and ```git commit -m [message]```
-5. Make a pull request with ```master``` as the BASE branch, with your changes as the HEAD branch
+5. Add your name below to the list of contributors!
+6. Make a pull request with ```master``` as the BASE branch, with your changes as the HEAD branch
     * Make sure you compare across forks
-6. Add your name below to the list of contributors!
+
 
 ### Contributors
 
