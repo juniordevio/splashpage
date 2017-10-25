@@ -183,6 +183,8 @@ pre {
   max-width: 600px;
 }
 
+input[type="url"],
+input[type="number"],
 input[type="text"],
 input[type="email"] {
   background-color: transparent;
@@ -195,6 +197,8 @@ input[type="email"] {
   line-height: 35px;
 }
 
+input[type="url"]:focus,
+input[type="number"]:focus,
 input[type="text"]:focus,
 input[type="email"]:focus {
   outline: none;
@@ -331,6 +335,15 @@ input[type="email"]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
 
+.members {
+  font-size: 24px;
+  background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+  color: white
+}
+
+.text-nudge:hover {
+  animation: nudge .4s linear;
+}
 
 /*Gradient Background Animation*/
 
@@ -382,6 +395,21 @@ input[type="email"]::-webkit-input-placeholder {
   }
 }
 
+
+@keyframes nudge {
+  
+  0% {
+    transform: rotate(-7deg);
+  }
+  
+  33% {
+    transform: rotate(7deg);
+  }
+  
+  66% {
+    transform: rotate(-7deg);
+  }
+}
 
 /*Responsive Design*/
 
