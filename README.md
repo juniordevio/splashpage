@@ -5,9 +5,9 @@ and allow people interested in technical mentoring and speaking to solicit their
 
 ## Technologies used
 
-Javascript
-Html
-CSS
+* Javascript
+* Html
+* CSS
 
 ## Installation and Run
 
