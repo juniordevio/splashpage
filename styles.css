@@ -348,6 +348,10 @@ input[type="email"]::-webkit-input-placeholder {
   animation: nudge .4s linear;
 }
 
+.text-nudge{
+  color:pink;
+}
+
 /*Gradient Background Animation*/
 
 @-webkit-keyframes GradientBackground {
@@ -400,15 +404,15 @@ input[type="email"]::-webkit-input-placeholder {
 
 
 @keyframes nudge {
-  
+
   0% {
     transform: rotate(-7deg);
   }
-  
+
   33% {
     transform: rotate(7deg);
   }
-  
+
   66% {
     transform: rotate(-7deg);
   }
