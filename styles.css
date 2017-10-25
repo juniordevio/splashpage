@@ -29,7 +29,8 @@ img#person1 {
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (2fr)[3] 1fr 4fr;
-  grid-template-rows: repeat(3, 2fr) 1fr 2fr;
+  /* grid-template-rows: repeat(3, 2fr) 1fr 2fr; */
+  grid-template-rows: 1fr;
   grid-gap: 15px;
 }
 
@@ -58,49 +59,50 @@ img#person1 {
 
 .card:nth-child(1) {
   grid-column: 1 / 5;
-  background-color: transparent;
-  color: white;
   font-size: 2rem;
-  box-shadow: none;
+  margin: 0px;
 }
 
 .card:nth-child(2) {
-  grid-column: 1 / 3;
+  grid-column: 1 / 5;
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
   text-align: center;
 }
 
+
 .card:nth-child(3) {
-  grid-column: 3 / 5;
-  text-align: center;
+  grid-column: 1/3;
 }
 
 .card:nth-child(4) {
-  grid-column: 1 / 2;
+  grid-column: 3/5;
+  text-align: center;
 }
 
 .card:nth-child(5) {
-  grid-column: 2 / 3;
-  background-color: transparent;
-  box-shadow: none;
+  grid-column: 1/2;
 }
 
 .card:nth-child(6) {
-  grid-column: 3 / 5;
-}
-
-.card:nth-child(10) {
+  grid-column: 2/3;
   background-color: transparent;
   box-shadow: none;
 }
 
-.card:nth-child(11) {
+.card:nth-child(7) {
+  grid-column: 3 / 5;
+}
+
+.card:nth-child(12) {
   grid-column: 1 / 4;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-.card:nth-child(12) {
-  grid-column: 4 / 5;
+.card:nth-child(13) {
+  grid-column: 4 / 5;  
 }
 
 @media (max-width: 550px) {
@@ -348,6 +350,7 @@ input[type="email"]::-webkit-input-placeholder {
   animation: nudge .4s linear;
 }
 
+
 /*Gradient Background Animation*/
 
 @-webkit-keyframes GradientBackground {
@@ -398,21 +401,18 @@ input[type="email"]::-webkit-input-placeholder {
   }
 }
 
-
 @keyframes nudge {
-  
   0% {
     transform: rotate(-7deg);
   }
-  
   33% {
     transform: rotate(7deg);
   }
-  
   66% {
     transform: rotate(-7deg);
   }
 }
+
 
 /*Responsive Design*/
 
@@ -442,6 +442,10 @@ input[type="email"]::-webkit-input-placeholder {
   }
 }
 
-#mc_embed_signup_scroll{
+#mc_embed_signup_scroll {
   font-size: 1rem;
+}
+
+.noMargin {
+  margin: 0px;
 }
