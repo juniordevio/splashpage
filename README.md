@@ -5,13 +5,21 @@
 
 This repository requires no installation! To run this project, navigate to the folder you cloned to and open ```index.html``` in your desired browser.
 HTML is located within the following files:
+
 HTML File | Description
 --------- | -----------
  ```index.html``` | Splashpage HTML
  ```speaking.html``` | Register to become a speaker page HTML
  ```technical-mentoring.html``` | Register to become a technical mentor page HTML
  ```thankyou.html``` | Thank you for registering page HTML
- All css is located in the ```styles.css``` file, as global styles.
+ 
+| HTML          | DESCRIPTION   |
+| ------------- |:-------------:|
+|```index.html``` | Splashpage HTML |
+|```speaking.html``` | Register to become a speaker page HTML|
+|```technical-mentoring.html``` | Register to become a technical mentor page HTML|
+|```thankyou.html``` | Thank you for registering page HTML|
+|All css is located in the ```styles.css``` file, as global styles.|
 
 ## Demo
 
