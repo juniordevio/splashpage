@@ -294,6 +294,7 @@ select {
   transition: border-left .1s ease;
 }
 
+.jd-subscribe-button,
 .jd-submit-button {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -312,12 +313,14 @@ select {
   background-color: rgba(49, 52, 64, .25);
 }
 
+.jd-subscribe-button--enabled,
 .jd-submit-button--enabled {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(49, 52, 64, 1);
   cursor: pointer;
 }
 
+.jd-subscribe-button--enabled:hover,
 .jd-submit-button--enabled:hover {
   transform: scale(1.05);
 }
