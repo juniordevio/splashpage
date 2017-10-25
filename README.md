@@ -13,13 +13,6 @@ HTML File | Description
  ```technical-mentoring.html``` | Register to become a technical mentor page HTML
  ```thankyou.html``` | Thank you for registering page HTML
  
-| HTML          | DESCRIPTION   |
-| ------------- |:-------------:|
-|```index.html``` | Splashpage HTML |
-|```speaking.html``` | Register to become a speaker page HTML|
-|```technical-mentoring.html``` | Register to become a technical mentor page HTML|
-|```thankyou.html``` | Thank you for registering page HTML|
-|All css is located in the ```styles.css``` file, as global styles.|
 
 ## Demo
 
