@@ -410,3 +410,7 @@ input[type="email"]::-webkit-input-placeholder {
     background: transparent;
   }
 }
+/* animation */
+
+.social-media:hover{ -webkit-animation: bounce 1s;
+    animation: bounce 1s;}
