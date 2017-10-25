@@ -140,16 +140,6 @@ pre {
   font-size: 1.4rem;
 }
 
-.social-media:hover {
-transition: width 2s;
-width: 250px;
-}
-
-.social-media {
-transition: width 2s;
-width: 280px;
-}
-
 .container {
   background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
   background-size: 600% 600%;
@@ -353,6 +343,10 @@ input[type="email"]::-webkit-input-placeholder {
 
 .text-nudge:hover {
   animation: nudge .4s linear;
+}
+
+.text-nudge{
+  color:pink;
 }
 
 /*Gradient Background Animation*/
