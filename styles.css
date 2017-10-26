@@ -97,6 +97,7 @@ img#person1 {
   grid-column: 1 / 4;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  text-align: justify;
 }
 
 .card:nth-child(12) {
@@ -400,15 +401,15 @@ input[type="email"]::-webkit-input-placeholder {
 
 
 @keyframes nudge {
-  
+
   0% {
     transform: rotate(-7deg);
   }
-  
+
   33% {
     transform: rotate(7deg);
   }
-  
+
   66% {
     transform: rotate(-7deg);
   }
