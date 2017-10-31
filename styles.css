@@ -442,6 +442,10 @@ input[type="email"]::-webkit-input-placeholder {
     background: transparent;
   }
 }
+/* animation */
+
+.social-media:hover{ -webkit-animation: bounce 1s;
+    animation: bounce 1s;}
 
 #mc_embed_signup_scroll{
   font-size: 1rem;
