@@ -23,7 +23,7 @@
             <div id="mc_embed_signup_scroll">
               <div class="jd-block">
                 <span class="mc-field-group jd-block">
-                    <img src="images/waving-hand_emoji.png" alt="waving hand" width="10%" />                    
+                    <img class="animated infinite tada" src="images/waving-hand_emoji.png" alt="waving hand" width="10%" />
                   <label for="mce-group[1331]" class="jd-greeting">Hey JuniorDev team,</label>
                   <span class="jd-block">I'm a junior
                     <span class="jd-input-container">
@@ -39,7 +39,7 @@
                     </span>
                     developer,
                   </span>
-                  <select name="group[1331]" class="REQ_CSS jd-type-select" id="mce-group[1331]">
+                  <select name="group[1331]" class="REQ_CSS jd-type-select required" id="mce-group[1331]">
                     <option value=""></option>
                     <option value="512">Full Stack</option>
                     <option value="1024">Front End</option>
@@ -52,7 +52,7 @@
                     <span class="jd-input-value location">
                       insert your location here
                       <span class="jd-chevron"></span>
-                    </span>
+                    </span>          
                     <span class="jd-select-contents hidden visuallyHidden hiddenFlag location-contents">
                       <span data-val="1" class="jd-lives-item">Victoria</span>
                       <span data-val="2" class="jd-lives-item">New South Wales</span>
@@ -63,10 +63,9 @@
                       <span data-val="64" class="jd-lives-item">Northern Territory</span>
                       <span data-val="128" class="jd-lives-item">Australian Capital Territory</span>
                       <span data-val="256" class="jd-lives-item">Rest Of World</span>
-                    </span>
-                    and
+                    </span>                
                   </span>
-                  <select name="group[1327]" class="REQ_CSS jd-lives-select" id="mce-group[1327]">
+                  <select name="group[1327]" class="REQ_CSS jd-lives-select required" id="mce-group[1327]">
                     <option value=""></option>
                     <option value="1">Victoria</option>
                     <option value="2">New South Wales</option>
@@ -81,7 +80,7 @@
                 </span>
               </div>
               <div class="mc-field-group jd-block">
-                <label for="mce-EMAIL">I'm interested in the latest news, articles, tutorials, and events for developers like me! You can email
+                <label for="mce-EMAIL">and I'm interested in the latest news, articles, tutorials, and events for developers like me! You can email
                   me quality content monthly at </label>
                 <input type="email" placeholder="notafake@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
               </div>
@@ -117,8 +116,8 @@
         <h1>I'm interested in Speaking</h1>
       </a>
     </div>
-    <div class="card">
-      <h1>
+    <div class="card members">
+      <h1 class="text-nudge">
         1200+ members
       </h1>
     </div>
@@ -149,16 +148,22 @@
       </a>
     </div>
     <div class="card">
-      <img src="images/waving-hand_emoji.png" alt="waving hand" width="35%" />
+      <img src="images/laptop_pencils_coffee.png" alt="laptop pencils coffee" width="100%" />
     </div>
     <div class="card">
       <pre><h1>We are ... </h1>
-A sustainable community. JuniorDev is a community that has been going for over a year now. 
+A sustainable community. JuniorDev is a community that has been going for over a year now.
 
-So far this has involved many regular and ad-hoc Meetups, hosting a JuniorDev Track at a Conference, a regular Monthly Newsletter sent to Junior Developers, all aimed at Junior Developers, or improving the industry for Junior Developers. 
+So far this has involved:
+<ul>
+<li>many regular and ad-hoc Meetups,</li>
+<li>hosting a JuniorDev Track at a Conference,</li>
+<li>a regular Monthly Newsletter sent to Junior Developers,</li>
+</ul>
+All activities are aimed at Junior Developers, or at improving the industry for Junior Developers.
 
 We've also kicked off a series of workshops, called Refactor, which you can read about <a href="http://medium.com/juniordev/" target="_blank"> here </a>
-        
+
 Where did it start? Well, when we, the co-organisers, first got into technology it was a lil' later in life than some, and we needed some support, some other JuniorDev friends!!
         
 We didn't have the support network of a university alumni, friends from colleage, old work mates, and we realised we were not alone. 
@@ -242,6 +247,7 @@ With each event we continue to meet engaged Junior Developers, who are learning,
       var inputValue = $(this).parent().siblings();
       $(inputValue).text($(this).text());
       $(inputValue).css('color', '#69f0ae');
+      enableSubmit();
     }
 
     //Hide the menus if visible
@@ -258,10 +264,13 @@ With each event we continue to meet engaged Junior Developers, who are learning,
       event.stopPropagation();
     })
 
-    $('#mce-EMAIL').keyup(function () {
+    //Check if submit button should be enable
+    function enableSubmit(event) {
+      var selectStack = $('.jd-lives-select').val();
+      var selectLocation = $('.jd-type-select').val();
       var emailRegEx =
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-      if (emailRegEx.test($('#mce-EMAIL').val())) {
+      if (emailRegEx.test($('#mce-EMAIL').val()) && selectStack && selectLocation) {
         $('#mc-embedded-subscribe').removeClass('jd-submit-button--disabled');
         $('#mc-embedded-subscribe').addClass('jd-submit-button--enabled');
         $('#mc-embedded-subscribe').prop('disabled', false);
@@ -272,7 +281,9 @@ With each event we continue to meet engaged Junior Developers, who are learning,
           $('#mc-embedded-subscribe').prop('disabled', true);
         }
       }
-    });
+    }
+
+    $('#mce-EMAIL').keyup(enableSubmit);
 
     // GA code
     (function (i, s, o, g, r, a, m) {
