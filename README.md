@@ -1,10 +1,8 @@
-# splashpage for JuniorDev.io
+# Slapsh Page for [JuniorDev.io](https://juniordev.io)
 
-https://juniordev.io/
+[JuniorDev.io](https://juniordev.io) is a Sign Up page where users can subscribe to our Newsletters and give us more information about whether they're a Front-end, Back-end, or Full-Stack Developer, and which state they live in.
 
-JuniorDev.io is a sign up page where users can subscribe to our newletters and give us more information about whether they're a front-end, back-end, or full-stack developer, and which state they live in.
-
-Next iterations: 
+# Next iterations: 
 - Add a nav component with links to: 
   - Meetup
   - Become a speaker
