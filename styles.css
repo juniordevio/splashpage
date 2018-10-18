@@ -34,6 +34,44 @@ html, body {
   animation: GradientBackground 49s ease infinite;
 }
 
+img.navIcon {
+  width: 35px;
+}
+
+.navIcon#meetupIcon{
+  transform: scale(1.2);
+}
+span.navText {
+  box-sizing: border-box;
+  font-size: 0.8em;
+  padding-left: 20px; 
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  transition: max-width 0.4s, opacity 0.4s;
+  color: white;
+  opacity: 0;
+}
+
+nav ul li:hover span.navText {
+  max-width: 300px;
+  opacity: 1;
+}
+
+nav {
+  position: absolute;
+  top: 42px;
+  right: 70px;
+}
+
+nav > ul > li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+
 #jd-logo {
   padding-left: 60px;
   padding-top: 60px;
