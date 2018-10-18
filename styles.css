@@ -1,11 +1,11 @@
 html, body {
   height: 100%;
   font-family: 'Rubik', sans-serif;
-  font-size: 29px;
   -webkit-font-smoothing: antialiased;
   color: #FFFFFF;
-  line-height: 28px;
   margin: 0;
+  font-size: 22px;
+  line-height: 38px;
   }
 
   a {
@@ -44,7 +44,9 @@ img.navIcon {
 span.navText {
   box-sizing: border-box;
   font-size: 0.8em;
-  padding-left: 20px; 
+  padding-left: 15px;
+  transform: translateY(15%);
+  
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -54,15 +56,10 @@ span.navText {
   opacity: 0;
 }
 
-nav ul li:hover span.navText {
-  max-width: 300px;
-  opacity: 1;
-}
-
 nav {
   position: absolute;
-  top: 42px;
-  right: 70px;
+  top: 30px;
+  right: 20px;
 }
 
 nav > ul > li {
@@ -73,12 +70,35 @@ nav > ul > li {
 
 
 #jd-logo {
-  padding-left: 60px;
+  padding-left: 25px;
   padding-top: 60px;
   padding-bottom: 30px;
   height: 2em;
+  width: 200px;
 }
+@media only screen and (min-width: 600px) {
+  #jd-logo {
+    width: 250px;
+    padding-left: 40px;
+  }
+  nav {
+    right: 40px;
+  }
+} 
+@media only screen and (min-width: 800px) {
+  #jd-logo {
+    width: 300px;
+    padding-left: 60px;
+  }
+  nav {
+    right: 70px;
+  }
 
+  nav ul li:hover span.navText {
+    max-width: 300px;
+    opacity: 1;
+  }
+} 
 .jd-block {
   display: block;
 }
@@ -88,9 +108,8 @@ nav > ul > li {
 }
 
 .container-content {
-  padding-left: 60px;
-  padding-right: 10px;
-  line-height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 600px;
 }
 
@@ -99,11 +118,46 @@ input[type="text"], input[type="email"] {
   border: none;
   border-bottom: 2px solid white;
   font-family: 'Rubik', sans-serif;
-  font-size: 29px;
   -webkit-font-smoothing: antialiased;
   color: rgba(255,255,255,0.25);
-  line-height: 35px;
+  font-size: 22px;
+  line-height: 38px;
+  height: 26px;
+  max-width: 100%;
 }
+
+/* text responsiveness */
+@media only screen and (min-width: 600px) {
+  .container-content {
+    padding-left: 42px; 
+    padding-right: 42px;
+  }
+  body, html {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  input[type="text"], input[type="email"] {
+    line-height: 40px;
+    font-size: 25px; 
+    height: 28px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  body, html {
+    line-height: 45px;
+    font-size: 29px;
+  }
+  input[type="text"], input[type="email"] {
+    line-height: 45px;
+    font-size: 29px; 
+    height: 32px;
+  }
+} 
 
 input[type="text"]:focus, input[type="email"]:focus {
   outline: none;
@@ -140,6 +194,7 @@ select {
 
 .jd-input-container {
   position: relative;
+  white-space: nowrap;
 }
 
 .jd-input-value {
