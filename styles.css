@@ -22,6 +22,15 @@ html, body {
     margin-bottom: 10px;
   }
 
+body.scrollLock {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
 
 .container {
   background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
@@ -52,14 +61,100 @@ span.navText {
   color: #69f0ae;
 }
 
+.navBackground {
+  width: calc( 170vw + 170vh );
+  height: calc( 170vw + 170vh );
+  background: #313440;
+  border-radius: 100%;
+  transform: translateY(-50%) translateX(50%) scale(0);
+  transition: transform 0.4s;
+  z-index: 50;
+}
+
+.navBackground.isActive {
+  transform: translateY(-50%) translateX(50%) scale(1);
+}
+
+button.hamburger {
+  border: none;
+  padding: 0;
+  cursor: pointer;  
+  outline: none;
+  
+  background: none;
+  z-index: 1000;
+  transform: translateY(-50%) translateX(50%);
+  
+}
+
+.navBackground, button.hamburger {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  
+}
+.hamburgerBox {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 15px;
+  border-radius: 100px;
+  background-color: white;
+  transition: transform 0.4s cubic-bezier(0.61,-0.14, 0.41, 1.12);
+}
+.hamburgerInner {
+  top: 50%;
+  margin: auto;
+  margin-top: -1px;
+}
+
+.hamburgerInner, .hamburgerInner::before, .hamburgerInner::after{
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 50px;
+  position: absolute;
+  background: rgba(222, 26, 255, 1);
+  content: '';
+  transition: transform 0.4s cubic-bezier(0.61,-0.14, 0.41, 1.12),
+              background 0.4s;
+}
+
+.hamburgerInner::before { top: 8px; }
+.hamburgerInner::after { top: -8px; }
+
+.hamburger.isActive .hamburgerBox {
+  transform: rotate(270deg);
+} 
+
+.hamburger.isActive .hamburgerInner{
+  background: rgba(222, 26, 255, 0);
+}
+
+.hamburger.isActive .hamburgerInner::before{
+  transform: translateY(-9px) rotate(-45deg);
+}
+.hamburger.isActive .hamburgerInner::after{
+  transform: translateY(7px) rotate(45deg);
+}
+
 nav {
   position: absolute;
   top: 0; right: 0; left: 0; bottom: 0;
-  background: #313440;
+  background: none;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+nav.isActive {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0s;
 }
 
 nav > ul {
@@ -95,7 +190,15 @@ nav > ul > li {
   img.navIcon {
     width: 35px;
   }
+  button.hamburger{
+    display: none;
+  }
+  .navBackground {
+    display: none;
+  }
   nav {
+    opacity: 1;
+    visibility: visible;
     position: absolute;
     top: 30px;
     right: 70px;
