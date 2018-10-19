@@ -35,7 +35,7 @@ html, body {
 }
 
 img.navIcon {
-  width: 35px;
+  width: 30px;
 }
 
 .navIcon#meetupIcon{
@@ -43,28 +43,32 @@ img.navIcon {
 }
 span.navText {
   box-sizing: border-box;
-  font-size: 0.8em;
+  font-size: 1em;
   padding-left: 15px;
   transform: translateY(15%);
   
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
-  max-width: 0;
-  transition: max-width 0.4s, opacity 0.4s;
-  color: white;
-  opacity: 0;
+  color: #69f0ae;
 }
 
 nav {
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 0; right: 0; left: 0; bottom: 0;
+  background: #313440;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav > ul {
+  padding: 0;
+  display: inline-block;
 }
 
 nav > ul > li {
   list-style: none;
-  display: inline-block;
   padding: 5px 10px;
 }
 
@@ -81,22 +85,41 @@ nav > ul > li {
     width: 250px;
     padding-left: 40px;
   }
-  nav {
-    right: 40px;
-  }
-} 
+}
+ 
 @media only screen and (min-width: 800px) {
   #jd-logo {
     width: 300px;
     padding-left: 60px;
   }
+  img.navIcon {
+    width: 35px;
+  }
   nav {
+    position: absolute;
+    top: 30px;
     right: 70px;
+    left: auto;
+    bottom: auto;
+    background: none;
   }
 
-  nav ul li:hover span.navText {
+  span.navText {
+    color: white;
+    white-space: nowrap;
+    font-size: 0.8em;
+    max-width: 0;
+    transition: max-width 0.4s, opacity 0.4s;
+    opacity: 0;
+  }
+
+  nav > ul > li:hover span.navText {
     max-width: 300px;
     opacity: 1;
+  }
+
+  nav > ul > li {
+    display: inline-block;
   }
 } 
 .jd-block {
