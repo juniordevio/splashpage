@@ -38,6 +38,16 @@ header {
   animation: GradientBackground 49s ease infinite;
 }
 
+.container-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container-center img{
+  max-width: 20%;
+}
+
 img.navIcon {
   width: 35px;
 }
