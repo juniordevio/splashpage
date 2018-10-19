@@ -1,11 +1,11 @@
 html, body {
   height: 100%;
   font-family: 'Rubik', sans-serif;
-  font-size: 29px;
   -webkit-font-smoothing: antialiased;
   color: #FFFFFF;
-  line-height: 28px;
   margin: 0;
+  font-size: 22px;
+  line-height: 38px;
   }
 
   a {
@@ -22,6 +22,15 @@ html, body {
     margin-bottom: 10px;
   }
 
+body.scrollLock {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
 
 .container {
   background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
@@ -35,7 +44,7 @@ html, body {
 }
 
 img.navIcon {
-  width: 35px;
+  width: 30px;
 }
 
 .navIcon#meetupIcon{
@@ -43,42 +52,179 @@ img.navIcon {
 }
 span.navText {
   box-sizing: border-box;
-  font-size: 0.8em;
-  padding-left: 20px; 
+  font-size: 1em;
+  padding-left: 15px;
+  transform: translateY(15%);
+  
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
-  max-width: 0;
-  transition: max-width 0.4s, opacity 0.4s;
-  color: white;
-  opacity: 0;
+  color: #69f0ae;
 }
 
-nav ul li:hover span.navText {
-  max-width: 300px;
-  opacity: 1;
+.navBackground {
+  width: calc( 170vw + 170vh );
+  height: calc( 170vw + 170vh );
+  background: #313440;
+  border-radius: 100%;
+  transform: translateY(-50%) translateX(50%) scale(0);
+  transition: transform 0.4s;
+  z-index: 50;
+}
+
+.navBackground.isActive {
+  transform: translateY(-50%) translateX(50%) scale(1);
+}
+
+button.hamburger {
+  border: none;
+  padding: 0;
+  cursor: pointer;  
+  outline: none;
+  
+  background: none;
+  z-index: 1000;
+  transform: translateY(-50%) translateX(50%);
+  
+}
+
+.navBackground, button.hamburger {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  
+}
+.hamburgerBox {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 15px;
+  border-radius: 100px;
+  background-color: white;
+  transition: transform 0.4s cubic-bezier(0.61,-0.14, 0.41, 1.12);
+}
+.hamburgerInner {
+  top: 50%;
+  margin: auto;
+  margin-top: -1px;
+}
+
+.hamburgerInner, .hamburgerInner::before, .hamburgerInner::after{
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 50px;
+  position: absolute;
+  background: rgba(222, 26, 255, 1);
+  content: '';
+  transition: transform 0.4s cubic-bezier(0.61,-0.14, 0.41, 1.12),
+              background 0.4s;
+}
+
+.hamburgerInner::before { top: 8px; }
+.hamburgerInner::after { top: -8px; }
+
+.hamburger.isActive .hamburgerBox {
+  transform: rotate(270deg);
+} 
+
+.hamburger.isActive .hamburgerInner{
+  background: rgba(222, 26, 255, 0);
+}
+
+.hamburger.isActive .hamburgerInner::before{
+  transform: translateY(-9px) rotate(-45deg);
+}
+.hamburger.isActive .hamburgerInner::after{
+  transform: translateY(7px) rotate(45deg);
 }
 
 nav {
   position: absolute;
-  top: 42px;
-  right: 70px;
+  top: 0; right: 0; left: 0; bottom: 0;
+  background: none;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+nav.isActive {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0s;
+}
+
+nav > ul {
+  padding: 0;
+  display: inline-block;
 }
 
 nav > ul > li {
   list-style: none;
-  display: inline-block;
   padding: 5px 10px;
 }
 
 
 #jd-logo {
-  padding-left: 60px;
+  padding-left: 25px;
   padding-top: 60px;
   padding-bottom: 30px;
   height: 2em;
+  width: 200px;
 }
+@media only screen and (min-width: 600px) {
+  #jd-logo {
+    width: 250px;
+    padding-left: 40px;
+  }
+}
+ 
+@media only screen and (min-width: 800px) {
+  #jd-logo {
+    width: 300px;
+    padding-left: 60px;
+  }
+  img.navIcon {
+    width: 35px;
+  }
+  button.hamburger{
+    display: none;
+  }
+  .navBackground {
+    display: none;
+  }
+  nav {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    left: auto;
+    bottom: auto;
+    background: none;
+  }
 
+  span.navText {
+    color: white;
+    white-space: nowrap;
+    font-size: 0.8em;
+    max-width: 0;
+    transition: max-width 0.4s, opacity 0.4s;
+    opacity: 0;
+  }
+
+  nav > ul > li:hover span.navText {
+    max-width: 300px;
+    opacity: 1;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+} 
 .jd-block {
   display: block;
 }
@@ -88,9 +234,8 @@ nav > ul > li {
 }
 
 .container-content {
-  padding-left: 60px;
-  padding-right: 10px;
-  line-height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 600px;
 }
 
@@ -99,11 +244,46 @@ input[type="text"], input[type="email"] {
   border: none;
   border-bottom: 2px solid white;
   font-family: 'Rubik', sans-serif;
-  font-size: 29px;
   -webkit-font-smoothing: antialiased;
   color: rgba(255,255,255,0.25);
-  line-height: 35px;
+  font-size: 22px;
+  line-height: 38px;
+  height: 26px;
+  max-width: 100%;
 }
+
+/* text responsiveness */
+@media only screen and (min-width: 600px) {
+  .container-content {
+    padding-left: 42px; 
+    padding-right: 42px;
+  }
+  body, html {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  input[type="text"], input[type="email"] {
+    line-height: 40px;
+    font-size: 25px; 
+    height: 28px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  body, html {
+    line-height: 45px;
+    font-size: 29px;
+  }
+  input[type="text"], input[type="email"] {
+    line-height: 45px;
+    font-size: 29px; 
+    height: 32px;
+  }
+} 
 
 input[type="text"]:focus, input[type="email"]:focus {
   outline: none;
@@ -140,6 +320,7 @@ select {
 
 .jd-input-container {
   position: relative;
+  white-space: nowrap;
 }
 
 .jd-input-value {

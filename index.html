@@ -12,14 +12,22 @@
 </head>
 
 <body>
-        <nav>
-          <ul>
-            <li><a href="http://juniordevcommunity.herokuapp.com" target="_blank"><img class="navIcon" id="slackIcon" src="images/slack.svg" alt="slack icon"/><span class="navText">Join Slack!</span></a>
-            <li><a href="https://www.meetup.com/en-AU/Junior-Developers-Melbourne" target="_blank"><img class="navIcon" id="meetupIcon" src="images/meetup.svg" alt="meetup icon"/><span class="navText">Join our Meetup</span></a>
-            <li><a href="https://twitter.com/juniordev_io" target="_blank"><img class="navIcon" id="twitterIcon" src="images/twitter.svg"/><span class="navText" alt="twitter icon">Follow our Twitter</span></a>
-            <li><a href="http://bit.ly/JDSpeakers" target="_blank"><img class="navIcon" id="speakerIcon" src="images/speaker-v2.svg" alt="speaker icon"/><span class="navText">Become a Speaker</span></a>
-          </ul>
-        </nav>
+    <button class="hamburger isActive" type="button">
+      <span class="hamburgerBox">
+        <span class="hamburgerInner"></span>
+      </span>
+    </button>
+    <div class="navBackground"></div>    
+
+    <nav>
+      <ul>
+        <li><a href='#'><img class="navIcon" id="slackIcon" src="images/slack.svg"/><span class="navText">Join Slack!</span></a>
+        <li><a href='#'><img class="navIcon" id="meetupIcon" src="images/meetup.svg"/><span class="navText">Join our Meetup</span></a>
+        <li><a href='#'><img class="navIcon" id="twitterIcon" src="images/twitter.svg"/><span class="navText">Follow our Twitter</span></a>
+        <li><a href='#'><img class="navIcon" id="speakerIcon" src="images/speaker-v2.svg"/><span class="navText">Become a Speaker</span></a>
+      </ul>
+    </nav>
+
     <div class="container">
         <a href="/index.html">
             <img id="jd-logo" src="images/logo_primary.svg" alt="Junior Dev Logo" />
@@ -109,6 +117,20 @@
       </div>
 
     <script type="text/javascript">
+
+      $('.hamburger').click( function () {
+        $(this).toggleClass('isActive');
+        
+        if( $(this).hasClass('isActive') ) {
+          $('.navBackground').addClass('isActive');
+          $('nav').addClass('isActive')
+          $('body').addClass('scrollLock')
+        } else {
+          $('.navBackground').removeClass('isActive');
+          $('nav').removeClass('isActive')
+          $('body').removeClass('scrollLock')
+        }
+      })
       $('.jd-input-value').click( function (event) {
         event.stopPropagation();
         $('.jd-chevron').removeClass('jd-chevron--rotate');
