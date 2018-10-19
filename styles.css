@@ -22,6 +22,10 @@ html, body {
     margin-bottom: 10px;
   }
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
 
 .container {
   background: linear-gradient(140deg, #ffbf1e, #de1aff, #25f18d);
@@ -54,15 +58,14 @@ span.navText {
   opacity: 0;
 }
 
-nav ul li:hover span.navText {
+nav ul li:hover > a span.navText {
   max-width: 300px;
   opacity: 1;
 }
 
-nav {
-  position: absolute;
-  top: 42px;
-  right: 70px;
+nav > ul {
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav > ul > li {
@@ -265,6 +268,26 @@ input[type="email"]::-webkit-input-placeholder {
 
 /*Responsive Design*/
 
+@media only screen and (max-width: 950px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav > ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #jd-logo {
+    box-sizing: border-box;
+    min-height: 3em;
+    width: 100%;
+    padding: 30px 15px 15px;
+  }
+}
+
 /* Portrait */
 
 @media only screen
@@ -272,11 +295,6 @@ input[type="email"]::-webkit-input-placeholder {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-
-  #jd-logo {
-    padding-left: 20px;
-    height: 1.7em;
-  }
 
   .container-content {
     padding-left: 20px;
