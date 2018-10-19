@@ -22,6 +22,10 @@ html, body {
     margin-bottom: 10px;
   }
 
+.noTransition {
+  transition: none !important;
+}
+
 body.scrollLock {
   position: absolute;
   left: 0;

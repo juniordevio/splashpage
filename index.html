@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <button class="hamburger isActive" type="button">
+    <button class="hamburger" type="button">
       <span class="hamburgerBox">
         <span class="hamburgerInner"></span>
       </span>
@@ -117,6 +117,19 @@
       </div>
 
     <script type="text/javascript">
+
+      var resizeTimer;
+      $(window).on('resize', function(event) {
+        //while resizing
+        clearTimeout(resizeTimer);
+        $('nav').addClass('noTransition') ;
+        $('nav').removeClass('isActive');
+        
+        resizeTimer = setTimeout(function() {
+          //after resizing
+          $('nav').removeClass('noTransition');
+        }, 250);
+      });
 
       $('.hamburger').click( function () {
         $(this).toggleClass('isActive');
