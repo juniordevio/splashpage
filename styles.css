@@ -6,6 +6,7 @@ html, body {
   margin: 0;
   font-size: 22px;
   line-height: 38px;
+  backface-visibility: hidden;
   }
 
   a {
@@ -72,6 +73,8 @@ span.navText {
   border-radius: 100%;
   transform: translateY(-50%) translateX(50%) scale(0);
   transition: transform 0.4s;
+  backface-visibility: hidden;
+  will-change: transform;
   z-index: 50;
 }
 
@@ -95,6 +98,7 @@ button.hamburger {
   position: absolute;
   top: 60px;
   right: 60px;
+  -webkit-tap-highlight-color: transparent;
   
 }
 .hamburgerBox {
