@@ -140,7 +140,9 @@
         } else {
           $('.navBackground').removeClass('isActive');
           $('nav').removeClass('isActive')
-          $('body').removeClass('scrollLock')
+          setTimeout(function() {
+            $('body').removeClass('scrollLock');
+          }, 300);
         }
       })
       $('.jd-input-value').click( function (event) {
