@@ -197,6 +197,10 @@ div.highlight span {
   color: darkblue;
 }
 
+.container-content .cards .card .links div {
+  text-align: center;
+}
+
 .container-content .cards .card .header {
   background-color: white;
 }
