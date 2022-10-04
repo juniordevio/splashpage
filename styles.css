@@ -49,6 +49,10 @@ a.button {
   border-radius: 5px;
   padding: 10px;
   white-space: nowrap;
+  transition: background 1s;
+}
+a.button:hover{
+  background: #25f18d;
 }
 
 .container {
